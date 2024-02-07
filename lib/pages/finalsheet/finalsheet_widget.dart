@@ -308,7 +308,7 @@ class _FinalsheetWidgetState extends State<FinalsheetWidget> {
                                 alignment: const AlignmentDirectional(0.7, -0.92),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 10.0, 0.0, 0.0),
+                                      0.0, 15.0, 0.0, 0.0),
                                   child: Container(
                                     width: 120.0,
                                     height: 120.0,
