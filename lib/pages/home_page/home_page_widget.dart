@@ -448,6 +448,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     await showModalBottomSheet(
                       isScrollControlled: true,
                       backgroundColor: Colors.transparent,
+                      useSafeArea: true,
                       context: context,
                       builder: (context) {
                         return GestureDetector(
@@ -458,7 +459,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           child: Padding(
                             padding: MediaQuery.viewInsetsOf(context),
                             child: SizedBox(
-                              height: MediaQuery.sizeOf(context).height * 0.9,
+                              height: MediaQuery.sizeOf(context).height * 1.0,
                               child: FinalsheetWidget(
                                 name: _model.nameController.text,
                                 reg: int.parse(_model.regController.text),
