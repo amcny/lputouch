@@ -458,7 +458,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           child: Padding(
                             padding: MediaQuery.viewInsetsOf(context),
                             child: SizedBox(
-                              height: 700.0,
+                              height: MediaQuery.sizeOf(context).height * 0.8,
                               child: FinalsheetWidget(
                                 name: _model.nameController.text,
                                 reg: int.parse(_model.regController.text),
