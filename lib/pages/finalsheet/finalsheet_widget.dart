@@ -358,22 +358,20 @@ class _FinalsheetWidgetState extends State<FinalsheetWidget> {
                             ),
                       ),
                     ),
-                    const Flexible(
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 75.0, 0.0, 0.0),
-                        child: FlutterFlowVideoPlayer(
-                          path: 'assets/videos/accepted.mp4',
-                          videoType: VideoType.asset,
-                          width: double.infinity,
-                          height: 190.0,
-                          autoPlay: true,
-                          looping: true,
-                          showControls: false,
-                          allowFullScreen: true,
-                          allowPlaybackSpeedMenu: false,
-                          pauseOnNavigate: false,
-                        ),
+                    const Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                      child: FlutterFlowVideoPlayer(
+                        path: 'assets/videos/accepted.mp4',
+                        videoType: VideoType.asset,
+                        width: double.infinity,
+                        height: 190.0,
+                        autoPlay: true,
+                        looping: true,
+                        showControls: false,
+                        allowFullScreen: true,
+                        allowPlaybackSpeedMenu: false,
+                        pauseOnNavigate: false,
                       ),
                     ),
                     Align(
