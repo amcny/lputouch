@@ -72,7 +72,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           title: Text(
             'LPUTouch',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Outfit',
+                  fontFamily: 'Ubuntu',
                   color: Colors.white,
                   fontSize: 22.0,
                 ),
@@ -92,7 +92,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   controller: _model.nameController,
                   focusNode: _model.nameFocusNode,
                   autofocus: true,
-                  textCapitalization: TextCapitalization.characters,
+                  textCapitalization: TextCapitalization.none,
                   obscureText: false,
                   decoration: InputDecoration(
                     labelText: 'Enter Name',
@@ -134,7 +134,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: 'Ubuntu',
                         fontSize: 16.0,
                       ),
                   validator:
@@ -187,7 +187,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: 'Ubuntu',
                         fontSize: 16.0,
                       ),
                   keyboardType: TextInputType.number,
@@ -243,7 +243,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: 'Ubuntu',
                         fontSize: 16.0,
                       ),
                   validator:
@@ -296,7 +296,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: 'Ubuntu',
                         fontSize: 16.0,
                       ),
                   validator:
@@ -349,7 +349,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: 'Ubuntu',
                         fontSize: 16.0,
                       ),
                   validator:
@@ -416,7 +416,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Readex Pro',
+                                fontFamily: 'Ubuntu',
                                 color: Colors.white,
                               ),
                       elevation: 3.0,
@@ -484,7 +484,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).tertiary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Readex Pro',
+                          fontFamily: 'Ubuntu',
                           color: Colors.white,
                         ),
                     borderSide: const BorderSide(
