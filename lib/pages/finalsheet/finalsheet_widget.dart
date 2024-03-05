@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'finalsheet_model.dart';
 export 'finalsheet_model.dart';
@@ -175,183 +174,160 @@ class _FinalsheetWidgetState extends State<FinalsheetWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Row(
-                      mainAxisSize: MainAxisSize.min,
+                      mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Flexible(
-                          child: Stack(
+                        Align(
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                5.0, 15.0, 0.0, 0.0),
+                            child: Container(
+                              width: 135.0,
+                              height: 135.0,
+                              decoration: const BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 5.0,
+                                    color: Color(0xE14E565C),
+                                    offset: Offset(0.0, 4.0),
+                                    spreadRadius: 1.0,
+                                  )
+                                ],
+                                shape: BoxShape.circle,
+                              ),
+                              child: Container(
+                                width: 120.0,
+                                height: 120.0,
+                                clipBehavior: Clip.antiAlias,
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.memory(
+                                  widget.image?.bytes ?? Uint8List.fromList([]),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Align(
                                 alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            20.0, 20.0, 0.0, 0.0),
-                                        child: Text(
-                                          valueOrDefault<String>(
-                                            widget.meal,
-                                            'meal',
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleLarge
-                                              .override(
-                                                fontFamily: 'Ubuntu',
-                                                fontSize: 24.0,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            20.0, 10.0, 0.0, 0.0),
-                                        child: Text(
-                                          valueOrDefault<String>(
-                                            widget.reg?.toString(),
-                                            'reg',
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleLarge
-                                              .override(
-                                                fontFamily: 'Ubuntu',
-                                                fontSize: 18.0,
-                                                letterSpacing: 1.55,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            20.0, 10.0, 0.0, 0.0),
-                                        child: Text(
-                                          valueOrDefault<String>(
-                                            widget.name,
-                                            'name',
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .titleLarge
-                                              .override(
-                                                fontFamily: 'Ubuntu',
-                                                fontSize: 18.0,
-                                                letterSpacing: 0.7,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            20.0, 10.0, 0.0, 0.0),
-                                        child: RichText(
-                                          textScaleFactor:
-                                              MediaQuery.of(context)
-                                                  .textScaleFactor,
-                                          text: TextSpan(
-                                            children: [
-                                              TextSpan(
-                                                text: valueOrDefault<String>(
-                                                  widget.messname,
-                                                  'messname',
-                                                ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily: 'Ubuntu',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryText,
-                                                          fontSize: 18.0,
-                                                          letterSpacing: 0.7,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                              ),
-                                              TextSpan(
-                                                text: ' ',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily: 'Ubuntu',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryText,
-                                                          fontSize: 14.0,
-                                                          letterSpacing: 0.7,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                              ),
-                                              TextSpan(
-                                                text: valueOrDefault<String>(
-                                                  widget.hostelname,
-                                                  'hostelname',
-                                                ),
-                                                style: const TextStyle(
-                                                  fontSize: 18.0,
-                                                ),
-                                              )
-                                            ],
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Ubuntu',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Align(
-                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      5.0, 15.0, 0.0, 0.0),
-                                  child: Container(
-                                    width: 135.0,
-                                    height: 135.0,
-                                    decoration: const BoxDecoration(
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 5.0,
-                                          color: Color(0xE14E565C),
-                                          offset: Offset(0.0, 4.0),
-                                          spreadRadius: 1.0,
-                                        )
-                                      ],
-                                      shape: BoxShape.circle,
+                                      10.0, 20.0, 0.0, 0.0),
+                                  child: Text(
+                                    valueOrDefault<String>(
+                                      widget.meal,
+                                      'meal',
                                     ),
-                                    child: Container(
-                                      width: 120.0,
-                                      height: 120.0,
-                                      clipBehavior: Clip.antiAlias,
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
+                                    style: FlutterFlowTheme.of(context)
+                                        .titleLarge
+                                        .override(
+                                          fontFamily: 'Ubuntu',
+                                          fontSize: 24.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    10.0, 10.0, 0.0, 0.0),
+                                child: Text(
+                                  valueOrDefault<String>(
+                                    widget.reg?.toString(),
+                                    'reg',
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleLarge
+                                      .override(
+                                        fontFamily: 'Ubuntu',
+                                        fontSize: 18.0,
+                                        letterSpacing: 1.55,
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                      child: Image.memory(
-                                        widget.image?.bytes ??
-                                            Uint8List.fromList([]),
-                                        fit: BoxFit.cover,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    10.0, 10.0, 0.0, 0.0),
+                                child: Text(
+                                  valueOrDefault<String>(
+                                    widget.name,
+                                    'name',
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleLarge
+                                      .override(
+                                        fontFamily: 'Ubuntu',
+                                        fontSize: 18.0,
+                                        letterSpacing: 0.7,
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                    ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    10.0, 10.0, 0.0, 0.0),
+                                child: RichText(
+                                  textScaleFactor:
+                                      MediaQuery.of(context).textScaleFactor,
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: valueOrDefault<String>(
+                                          widget.messname,
+                                          'messname',
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .override(
+                                              fontFamily: 'Ubuntu',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              fontSize: 18.0,
+                                              letterSpacing: 0.7,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                      ),
+                                      TextSpan(
+                                        text: ' ',
+                                        style: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .override(
+                                              fontFamily: 'Ubuntu',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              fontSize: 14.0,
+                                              letterSpacing: 0.7,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                      ),
+                                      TextSpan(
+                                        text: valueOrDefault<String>(
+                                          widget.hostelname,
+                                          'hostelname',
+                                        ),
+                                        style: const TextStyle(
+                                          fontSize: 18.0,
+                                        ),
+                                      )
+                                    ],
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Ubuntu',
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -360,9 +336,25 @@ class _FinalsheetWidgetState extends State<FinalsheetWidget> {
                         ),
                       ],
                     ),
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      child: Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            10.0, 20.0, 0.0, 0.0),
+                        child: Text(
+                          'P132:B.Tech. (Computer Science and Engineering)(2022)',
+                          style:
+                              FlutterFlowTheme.of(context).titleLarge.override(
+                                    fontFamily: 'Open Sans',
+                                    fontSize: 18.5,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                        ),
+                      ),
+                    ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 5.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 7.0),
                       child: Text(
                         'Meal Approved',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -373,141 +365,31 @@ class _FinalsheetWidgetState extends State<FinalsheetWidget> {
                             ),
                       ),
                     ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                      child: FlutterFlowVideoPlayer(
-                        path: 'assets/videos/gif.mp4',
-                        videoType: VideoType.asset,
-                        width: double.infinity,
-                        height: MediaQuery.sizeOf(context).height * 0.24,
-                        autoPlay: true,
-                        looping: true,
-                        showControls: false,
-                        allowFullScreen: true,
-                        allowPlaybackSpeedMenu: false,
-                        pauseOnNavigate: false,
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  'Date',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Ubuntu',
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                                Text(
-                                  dateTimeFormat('yMMMd', getCurrentTimestamp),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Ubuntu',
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                ),
-                              ].divide(const SizedBox(width: 90.0)),
-                            ),
-                            Divider(
-                              thickness: 1.0,
-                              indent: 70.0,
-                              endIndent: 70.0,
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  'Time',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Ubuntu',
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                                Text(
-                                  dateTimeFormat('jm', getCurrentTimestamp),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Ubuntu',
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                ),
-                              ].divide(const SizedBox(width: 130.0)),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 15.0, 20.0, 0.0),
-                              child: Container(
-                                width: double.infinity,
-                                height: 43.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  border: Border.all(
-                                    color: Colors.black,
-                                    width: 1.5,
-                                  ),
-                                ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      'Verification Code',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Ubuntu',
-                                            fontSize: 16.0,
-                                          ),
-                                    ),
-                                    Text(
-                                      valueOrDefault<String>(
-                                        functions.digit()?.toString(),
-                                        'num',
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Ubuntu',
-                                            fontSize: 16.0,
-                                          ),
-                                    ),
-                                  ]
-                                      .addToStart(const SizedBox(width: 5.0))
-                                      .addToEnd(const SizedBox(width: 5.0)),
-                                ),
-                              ),
-                            ),
-                          ],
+                    Flexible(
+                      child: Container(
+                        height: double.infinity,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: const Color(0xDB4F0589),
+                            width: 23.0,
+                          ),
+                        ),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 45.0, 0.0, 0.0),
+                          child: FlutterFlowVideoPlayer(
+                            path: 'assets/videos/gif.mp4',
+                            videoType: VideoType.asset,
+                            width: double.infinity,
+                            height: MediaQuery.sizeOf(context).height * 0.24,
+                            autoPlay: true,
+                            looping: true,
+                            showControls: false,
+                            allowFullScreen: true,
+                            allowPlaybackSpeedMenu: false,
+                            pauseOnNavigate: false,
+                          ),
                         ),
                       ),
                     ),
